@@ -12,9 +12,13 @@ module BitbucketApi
   class Client
     BASE_URL = 'https://api.bitbucket.org/2.0'.freeze
 
-    def initialize(options = {})
+    def initialize(options = {}, &block)
+      config = BitbucketApi
+
+      yield config if block_given?
+
       @connection = Faraday.new(url: BASE_URL) do |conn|
-        conn.request :basic_auth, BitbucketApi.username, BitbucketApi.app_password
+        conn.request :basic_auth, config.username, config.app_password
         conn.request :json
         conn.response :json
         
