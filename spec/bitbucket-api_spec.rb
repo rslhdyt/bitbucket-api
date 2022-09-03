@@ -10,13 +10,13 @@ describe BitbucketApi do
   describe 'config' do
     context 'when set config using block' do
       it 'return correct value' do
-        described_class.config do |config|
+        described_class.configure do |config|
           config.username = 'banana'
           config.app_password = 'secret'
         end
 
-        expect(described_class.username).to eq 'banana'
-        expect(described_class.app_password).to eq 'secret'
+        expect(described_class.config.username).to eq 'banana'
+        expect(described_class.config.app_password).to eq 'secret'
       end
     end
 

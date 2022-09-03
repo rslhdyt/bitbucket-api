@@ -1,6 +1,8 @@
 # Bitbucket API
 Bitbucket 2.0 API client
 
+WARNING This bitbucket client is under development.
+
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -27,7 +29,7 @@ $ gem install bitbucket-api
 There is multiple ways to set the config.
 
 ```
-BitbucketApi.config do |config|
+BitbucketApi.configure do |config|
     config.username = 'BITBUCKET_USERNAME'
     config.app_password = 'BITBUCKET_APP_PASSWORD'
 end

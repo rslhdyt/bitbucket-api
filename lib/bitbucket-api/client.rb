@@ -13,7 +13,7 @@ module BitbucketApi
     BASE_URL = 'https://api.bitbucket.org/2.0'.freeze
 
     def initialize(options = {}, &block)
-      config = BitbucketApi
+      config = BitbucketApi::Configuration.new(options)
 
       yield config if block_given?
 
