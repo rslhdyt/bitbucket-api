@@ -5,8 +5,8 @@ Gem::Specification.new do |gem|
   gem.authors               = [ "Risal Hidayat" ]
   gem.email                 = "risalhidayat88@gmail.com"
   gem.homepage              = 'https://github.com/rslhdyt/bitbucket-api'
-  gem.summary               = %q{ Ruby wrapper for the BitBucket API supporting OAuth and Basic Authentication }
-  gem.description           = %q{ Ruby wrapper for the BitBucket API supporting OAuth and Basic Authentication }
+  gem.summary               = %q{ Ruby wrapper for the BitBucket API }
+  gem.description           = %q{ Ruby wrapper for the BitBucket API }
   gem.version               = BitbucketApi::VERSION
   gem.license               = "MIT"
   gem.required_ruby_version = '>= 2.5.0'

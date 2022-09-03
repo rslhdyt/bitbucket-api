@@ -19,6 +19,12 @@ module BitbucketApi
         BitbucketApi::Collection::Pagination.new(response, BitbucketApi::Model::PullRequest)
       end
 
+      def find(repository, pull_request_id)
+        response = @client.get("repositories/#{repository}/pullrequests/#{pull_request_id}")
+
+        BitbucketApi::Model::PullRequest.new(response)
+      end
+
       def default_reviewers(repository)
         response = @client.get("repositories/#{repository}/default-reviewers")
         
